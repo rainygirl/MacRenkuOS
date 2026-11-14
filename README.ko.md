@@ -5,6 +5,8 @@
 [RenkuOS](https://github.com/rainygirl/renkuos-arm64)를 Apple Silicon에서,
 터미널에서, 명령어 한 줄로 실행합니다.
 
+![QEMU로 실행 중인 RenkuOS arm64](docs/screenshot.png)
+
 ## 설치
 
 ```sh

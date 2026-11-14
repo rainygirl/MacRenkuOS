@@ -5,6 +5,8 @@
 Run [RenkuOS](https://github.com/rainygirl/renkuos-arm64) on Apple
 Silicon, from the Terminal, with one command.
 
+![RenkuOS arm64 running under QEMU](docs/screenshot.png)
+
 ## Install
 
 ```sh
