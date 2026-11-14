@@ -16,6 +16,10 @@
 # invalidates it). No network, or a live session already running: the
 # cached ISO/overlay are left alone.
 #
+# While the guest runs, its boot volume is mounted on the Mac as a network
+# volume named RenkuOS (Finder > Locations) -- run-qemu-renku-arm64.sh does
+# that, against renku-arm64's arm64-patch 0047; RENKU_SHARE=0 turns it off.
+#
 # The first run installs itself as a `renkuos` command on PATH, so later
 # runs are just `renkuos`.
 set -euo pipefail
@@ -126,7 +130,7 @@ check_for_update() {
 		return 0
 	fi
 
-	info "Downloading the RenkuOS live image ($latest, ~450MB)"
+	info "Downloading the RenkuOS live image ($latest, ~310MB)"
 	if curl -fL --retry 3 --max-time 600 -o "$ISO.part" "$ISO_URL"; then
 		mv "$ISO.part" "$ISO"
 		rm -f "$ISO_OVERLAY"   # a new ISO invalidates the old overlay
