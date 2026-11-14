@@ -41,9 +41,5 @@ same way you would an installed disk.
 
 ## Shared folder
 
-While RenkuOS runs, its disk shows up on the Mac as a network volume named
-**RenkuOS** (Finder > Locations) -- read-write, no login. Drag files into it
-to put them in the guest (your home folder there is `home`), or out of it
-to bring them to the Mac. It is reachable from this Mac only, and it is
-unmounted when RenkuOS shuts down. `RENKU_SHARE=0 renkuos` starts without
-it.
+While RenkuOS runs, its disk appears in Finder as **RenkuOS** (Locations).
+Drag files in or out -- no login needed. `RENKU_SHARE=0 renkuos` turns it off.
